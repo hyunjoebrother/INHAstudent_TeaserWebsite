@@ -1,0 +1,87 @@
+/* COMMON */
+body {
+    /* 기본 setting */
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-family: "Nanum Gothic", sans-serif;
+  
+    height: 3000px; /* 스크롤바 */
+}
+  
+  /* logo 밑 여백 */
+img {
+    display: block;
+}
+  
+a {
+    text-decoration: none; /* 링크라서 걸린 밑줄 제거 */
+}
+  
+  /* 가운데 정렬 */
+.inner {
+    width: 1100px;
+    margin: 0 auto; /* 외부여백 위아래는 0 좌우는 auto */
+    position: relative;
+}
+
+  /* HEADER */
+header {
+      width: 100%;
+      background-color: #000;
+      opacity: .85;
+      position: fixed;
+      top: 0;
+      z-index: 9;
+}
+
+header > .inner {
+    height: 120px;
+}
+
+header .main-menu {
+position: absolute;
+bottom: 0;
+right: 0;
+z-index: 1;
+display: flex;
+}
+
+header .main-menu .main-menu-list {   
+}
+
+header .main-menu .main-menu-list .menu-name {
+    padding: 10px 20px 34px 20px;
+    font-size: 31px;
+}
+
+header .main-menu .main-menu-list:hover .menu-name {
+    background-color: red;
+    color: #fff;
+    border-radius: 6px 6px 0 0;
+}
+
+header .main-menu .main-menu-list .menu-contents {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: none;
+}
+
+header .main-menu .main-menu-list:hover .menu-contents {
+    display: block;
+}
+
+header .main-menu .main-menu-list .menu-contents .contents-menu {
+    background-color: green;
+}
+
+header .main-menu .main-menu-list .menu-contents .contents-menu > ul {
+    display: flex; /* 배열 */
+    padding: 20px 0;
+}
+
+header .main-menu .main-menu-list .menu-contents .contents-menu > ul > li {
+    width: 220px;
+}
