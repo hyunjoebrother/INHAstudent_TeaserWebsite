@@ -21,6 +21,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+}
+
 /* 가운데 정렬 */
 .inner {
   width: 100%;
@@ -114,7 +120,6 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 .scroll-section {
   position: relative;
   padding-top: 50vh;
-  border: 3px solid red;
 }
 #scroll-section-0 h1 {
   position: relative;
@@ -123,6 +128,8 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   font-size: 4rem;
   text-align: center;
 }
+
+/* Section1 - 인트로 */
 
 #scroll-section-1 .section1-container {
   /* background-color: yellow; */
@@ -138,7 +145,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   text-align: center;
   justify-content: center;
   padding-top: 160px;
-  height: 100%;
+  height: 100vh;
 }
 
 /* #scroll-section-1 p strong {
@@ -157,11 +164,11 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 }
 
 .scroll-section-list2 p {
-  background: url("../img/멍냥프로그래밍팀톡방.png");
+  background: url("../img/CrowdMoment.jpg");
 }
 
 .scroll-section-list3 p {
-  background: url("../img/어항고양이예시.jpg");
+  background: url("../img/NightMoment.jpg");
 }
 
 .main-message {
@@ -184,6 +191,9 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   margin-bottom: 0.5em;
   font-size: 1.2rem;
 }
+
+/* Section2 - 공개행정 */
+
 #scroll-section-2 .main-message {
   font-size: 3.5rem;
 }
@@ -205,19 +215,20 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   font-weight: bold;
   opacity: 0;
 }
+
 .pin {
   width: 1px;
   height: 100px;
   background: rgb(29, 29, 31);
 }
-#scroll-section-2 .b {
+/* #scroll-section-2 .b {
   top: 10%;
   left: 40%;
 }
 #scroll-section-2 .c {
   top: 15%;
   left: 45%;
-}
+} */
 .mid-message {
   max-width: 1000px;
   margin: 0 auto;
@@ -235,25 +246,20 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   font-size: 1.2rem;
   color: #888;
 }
-.footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 7rem;
-  color: white;
-  background: darkorange;
-}
+
 .sticky-elem {
   display: none;
   position: fixed;
   left: 0;
   width: 100%;
 }
+
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
-#show-scene-1 #scroll-section-1-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
-#show-scene-3 #scroll-section-3 .sticky-elem {
+#show-scene-3 #scroll-section-3 .sticky-elem,
+#show-scene-4 #scroll-section-4 .sticky-elem,
+#show-scene-5 #scroll-section-5 .sticky-elem {
   display: block;
   will-change: transform, opacity;
 }
@@ -267,19 +273,23 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 }
 .sticky-elem-canvas canvas {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
 }
+/* 
 #scroll-section-3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
+
 .image-blend-canvas.sticky {
   position: fixed;
   top: 0;
   z-index: 10;
 }
+
 .loading {
   display: flex;
   align-items: center;
@@ -337,6 +347,16 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 
 .normal-content {
   margin-bottom: 10rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1rem;
 }
 
 @media (min-width: 1024px) {

@@ -1,6 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["VxO0OXS"]); }
-
-__d("CometPagesLoggedOutCTAWrapperFooterDataQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="3655026281267832"}),null);
-__d("CometWoodhengeSignUpRootQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="4271126839653224"}),null);
-__d("PageCometCreationRootQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="2500629690054944"}),null);
-__d("PagesCometMusicVideosCardContainerQuery_facebookRelayOperation",[],(function(a,b,c,d,e,f){e.exports="6575742022498472"}),null);
