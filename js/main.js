@@ -43,14 +43,35 @@
         messageD_translateY_out: [0, -20, { start: 0.85, end: 0.9 }],
       },
     },
+    // {
+    //   // section 1
+    //   type: "normal",
+    //   // heightNum: 5, // type normal에서는 필요 없음
+    //   scrollHeight: 0,
+    //   objs: {
+    //     container: document.querySelector("#scroll-section-1"),
+    //     content: document.querySelector("#scroll-section-1 .description"),
+    //   },
+    // },
     {
       // section 1
-      type: "normal",
-      // heightNum: 5, // type normal에서는 필요 없음
+      // section 1-1 video
+      type: "sticky",
+      heightNum: 5,
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-1"),
-        content: document.querySelector("#scroll-section-1 .description"),
+        // messageABCD
+        canvas: document.querySelector("#video-canvas-1"),
+        //content: document.querySelector("#scroll-section-1 .description"),
+        context: document.querySelector("#video-canvas-1").getContext("2d"),
+        videoImages: [],
+      },
+      values: {
+        videoImageCount: 14,
+        imageSequence: [0, 13],
+        canvas_opacity: [1, 0, { start: 0.9, end: 1 }],
+        // ,assage opacity, translate
       },
     },
     {
@@ -98,6 +119,16 @@
       values: { eY: [20, 0, { start: 0, end: 0 }], rectStartY: 0 },
     },
   ];
+
+  function setCanvasImages() {
+    let imgElem;
+    for (let i = 0; i < sceneInfo[1].values.videoImageCount; i++) {
+      imgElem = new Image();
+      imgElem.src = `../video/공개행정_사진/공개행정_영상${i}.JPG`;
+      sceneInfo[1].objs.videoImages.push(imgElem);
+    }
+    console.log(sceneInfo[1].objs.videoImages);
+  }
 
   function setLayout() {
     // 각 스크롤 섹션의 높이 세팅
@@ -263,8 +294,96 @@
 
         break;
 
-      //case 1: // normal type이라서 타이밍 조절 x
-      //  break;
+        //case 1: // normal type이라서 타이밍 조절 x
+        if (scrollRatio <= 0.22) {
+          // in
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_out,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.42) {
+          // in
+          objs.messageB.style.opacity = calcValues(
+            values.messageB_opacity_in,
+            currentYOffset
+          );
+          objs.messageB.style.transform = `translate3d(0, ${calcValues(
+            values.messageB_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageB.style.opacity = calcValues(
+            values.messageB_opacity_out,
+            currentYOffset
+          );
+          objs.messageB.style.transform = `translate3d(0, ${calcValues(
+            values.messageB_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.62) {
+          // in
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_in,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_out,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        if (scrollRatio <= 0.82) {
+          // in
+          objs.messageD.style.opacity = calcValues(
+            values.messageD_opacity_in,
+            currentYOffset
+          );
+          objs.messageD.style.transform = `translate3d(0, ${calcValues(
+            values.messageD_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageD.style.opacity = calcValues(
+            values.messageD_opacity_out,
+            currentYOffset
+          );
+          objs.messageD.style.transform = `translate3d(0, ${calcValues(
+            values.messageD_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
+        break;
 
       case 2:
         // console.log('2 play');

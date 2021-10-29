@@ -114,6 +114,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 .scroll-section {
   position: relative;
   padding-top: 50vh;
+  border: 3px solid red;
 }
 #scroll-section-0 h1 {
   position: relative;
@@ -122,6 +123,47 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   font-size: 4rem;
   text-align: center;
 }
+
+#scroll-section-1 .section1-container {
+  /* background-color: yellow; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+#scroll-section-1 p {
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+  padding-top: 160px;
+  height: 100%;
+}
+
+/* #scroll-section-1 p strong {
+    font-size: 64px;
+} */
+
+.scroll-section-list1,
+.scroll-section-list2,
+.scroll-section-list3 {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-section-list1 p {
+  background: url("../img/인하실록.jpg");
+}
+
+.scroll-section-list2 p {
+  background: url("../img/멍냥프로그래밍팀톡방.png");
+}
+
+.scroll-section-list3 p {
+  background: url("../img/어항고양이예시.jpg");
+}
+
 .main-message {
   display: flex;
   align-items: center;
@@ -145,7 +187,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 #scroll-section-2 .main-message {
   font-size: 3.5rem;
 }
-.description {
+/* .description {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 1rem;
@@ -156,8 +198,8 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   float: left;
   margin-right: 0.2em;
   font-size: 3rem;
-  color: rgb(29, 29, 31);
-}
+  color: rgb(29, 29, 31); */
+
 .sticky-elem.desc-message {
   width: 45%;
   font-weight: bold;
@@ -209,6 +251,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 }
 #show-scene-0 #scroll-section-0 .sticky-elem,
 #show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-1 #scroll-section-1-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem {
   display: block;
