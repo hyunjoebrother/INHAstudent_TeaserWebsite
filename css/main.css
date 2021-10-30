@@ -276,6 +276,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   width: 100%;
   height: 100%;
   z-index: 9;
+  border: 3px solid red;
 }
 /* 
 #scroll-section-3 {
