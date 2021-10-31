@@ -68,6 +68,8 @@
       values: {
         videoImageCount: 14,
         imageSequence: [0, 13],
+        canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
+        canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
       },
     },
     {
@@ -79,7 +81,6 @@
         container: document.querySelector("#scroll-section-3"),
         // messageABCD
         canvas: document.querySelector("#video-canvas-3"),
-        //content: document.querySelector("#scroll-section-3 .description"),
         context: document.querySelector("#video-canvas-3").getContext("2d"),
         videoImages: [],
       },
@@ -97,7 +98,6 @@
         container: document.querySelector("#scroll-section-4"),
         // messageABCD
         canvas: document.querySelector("#video-canvas-4"),
-        //content: document.querySelector("#scroll-section-4 .description"),
         context: document.querySelector("#video-canvas-4").getContext("2d"),
         videoImages: [],
       },
@@ -339,17 +339,41 @@
         break;
 
       case 2: // 공개 행정
-        let sequence = Math.round(
+        let sequence1 = Math.round(
           calcValues(values.imageSequence, currentYOffset)
         );
-        objs.context.drawImage(objs.videoImages[sequence], 0, 0);
+        objs.context.drawImage(objs.videoImages[sequence1], 0, 0);
+
+        if (scrollRatio <= 0.5) {
+          // in
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_in,
+            currentYOffset
+          );
+        } else {
+          // out
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_out,
+            currentYOffset
+          );
+        }
 
         break;
 
       case 3: // 참여 행정
+        let sequence2 = Math.round(
+          calcValues(values.imageSequence, currentYOffset)
+        );
+        objs.context.drawImage(objs.videoImages[sequence2], 0, 0);
+
         break;
 
       case 4: // 능률 행정
+        let sequence3 = Math.round(
+          calcValues(values.imageSequence, currentYOffset)
+        );
+        objs.context.drawImage(objs.videoImages[sequence3], 0, 0);
+
         break;
 
       case 5: // 마무리
