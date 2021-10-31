@@ -270,6 +270,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 .sticky-elem-canvas {
   top: 0;
   height: 100%;
+  background-color: gray;
 }
 .sticky-elem-canvas canvas {
   position: absolute;
