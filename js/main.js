@@ -62,7 +62,7 @@
         container: document.querySelector("#scroll-section-2"),
         // messageABCD
         canvas: document.querySelector("#video-canvas-2"),
-        //context: document.querySelector("#video-canvas-2").getContext("2d"),
+        context: document.querySelector("#video-canvas-2").getContext("2d"),
         videoImages: [],
       },
       values: {
@@ -80,7 +80,7 @@
         // messageABCD
         canvas: document.querySelector("#video-canvas-3"),
         //content: document.querySelector("#scroll-section-3 .description"),
-        //context: document.querySelector("#video-canvas-3").getContext("2d"),
+        context: document.querySelector("#video-canvas-3").getContext("2d"),
         videoImages: [],
       },
       values: {
@@ -98,7 +98,7 @@
         // messageABCD
         canvas: document.querySelector("#video-canvas-4"),
         //content: document.querySelector("#scroll-section-4 .description"),
-        //context: document.querySelector("#video-canvas-4").getContext("2d"),
+        context: document.querySelector("#video-canvas-4").getContext("2d"),
         videoImages: [],
       },
       values: {
@@ -244,10 +244,6 @@
     switch (currentScene) {
       case 0: // 인트로
         // console.log('0 play');
-        let sequence = Math.round(
-          calcValues(values.imageSequence, currentYOffset)
-        );
-        objs.context.drawImage(objs.videoImages[sequence], 0, 0);
 
         if (scrollRatio <= 0.22) {
           // in
@@ -343,6 +339,11 @@
         break;
 
       case 2: // 공개 행정
+        let sequence = Math.round(
+          calcValues(values.imageSequence, currentYOffset)
+        );
+        objs.context.drawImage(objs.videoImages[sequence], 0, 0);
+
         break;
 
       case 3: // 참여 행정
