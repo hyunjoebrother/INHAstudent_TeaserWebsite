@@ -51,6 +51,12 @@
       objs: {
         container: document.querySelector("#scroll-section-1"),
         content: document.querySelector("#scroll-section-1 .description"),
+        ribbonPath: document.querySelector(".ribbon-path path"),
+      },
+      values: {
+        // 스트로크
+        path_dashoffset_in: [1401, 0, { start: 0.1, end: 0.7 }],
+        path_dashoffset_out: [0, -1401, { start: 0.4, end: 0.8 }],
       },
     },
     {
@@ -60,7 +66,7 @@
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-2"),
-        // messageABCD
+        messageA: document.querySelector("#scroll-section-2 .main-message.a"),
         canvas: document.querySelector("#video-canvas-2"),
         context: document.querySelector("#video-canvas-2").getContext("2d"),
         videoImages: [],
@@ -70,6 +76,10 @@
         imageSequence: [0, 20],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
+        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+        messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
       },
     },
     {
@@ -340,6 +350,19 @@
         break;
 
       case 1: // 리스트
+        // 빨간 리본 패스(줄 긋기)
+        // 빨간 리본 패스(줄 긋기)
+        if (scrollRatio <= 0.4) {
+          objs.ribbonPath.style.strokeDashoffset = calcValues(
+            values.path_dashoffset_in,
+            currentYOffset
+          );
+        } else {
+          objs.ribbonPath.style.strokeDashoffset = calcValues(
+            values.path_dashoffset_out,
+            currentYOffset
+          );
+        }
         break;
 
       case 2: // 공개 행정
@@ -347,6 +370,18 @@
           calcValues(values.imageSequence, currentYOffset)
         );
         objs.context.drawImage(objs.videoImages[sequence1], 0, 0);
+
+        if (scrollRatio <= 0.22) {
+          // in
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        }
 
         if (scrollRatio <= 0.4) {
           // in
@@ -412,7 +447,7 @@
             values.messageA_translateY_in,
             currentYOffset
           )}%, 0)`;
-        } 
+        }
 
         if (scrollRatio <= 0.4) {
           // in

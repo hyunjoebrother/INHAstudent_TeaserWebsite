@@ -171,6 +171,24 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   height: 100vh;
 }
 
+.ribbon-path {
+  width: 100%;
+  right: 0;
+  top: 66%;
+  margin-bottom: 1200%;
+  /* min-width: 850px; */
+  transform: translate(-10%, -60%);
+}
+.ribbon-path path {
+  fill: none;
+  stroke: #00afec;
+  opacity: 0.8;
+  stroke-width: 37;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1401, 1401;
+  stroke-dashoffset: 1401;
+}
 /* #scroll-section-1 p strong {
     font-size: 64px;
 } */
@@ -181,65 +199,35 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   width: 100%;
   height: 100%;
 }
-/* 
-.scroll-section-list1 p {
-  background: url("../img/인하실록.jpg");
-}
-
-.scroll-section-list2 p {
-  background: url("../img/CrowdMoment.jpg");
-}
-
-.scroll-section-list3 p {
-  background: url("../img/NightMoment.jpg");
-} */
-
+/*
 .section-description {
   position: relative;
-  float: right;
-  margin-left: 10px;
-  margin-right: 100px;
+  text-align: center;
   margin-top: 320vh;
-  /* max-width: 1000px; */
+  /* max-width: 1000px; 
   padding: 0 1rem;
   font-size: 1.4rem;
   z-index: 9;
-}
+} */
 
 .section-description strong {
-  margin-right: 2em;
   font-size: 6rem;
 }
 
 /* Section2 - 공개행정 */
-
-.pin {
+#scroll-section-2 {
   position: relative;
-  display: flex;
-  width: 480px;
-  height: 1px;
-  background-color: #fff;
 }
 
 #scroll-section-2 .main-message {
-  font-size: 3.5rem;
+  font-size: 1.4rem;
+  margin-top: -20px;
+  margin-left: 180px;
 }
 
-#scroll-section-2 .description {
-  text-align: center;
-  position: fixed;
+#scroll-section-2 strong {
+  font-size: 4.4rem;
 }
-
-#scroll-section-2 #content {
-  top: 120vh;
-  left: 440px;
-  text-align: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: 400;
-  color: #fff;
-}
-
 /* Section3 - 참여행정 */
 #scroll-section-3 {
   position: relative;
@@ -254,7 +242,6 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 #scroll-section-3 strong {
   font-size: 4.4rem;
 }
-
 
 #video-canvas-3 {
   position: relative;
@@ -280,7 +267,6 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 #scroll-section-4 strong {
   font-size: 4.4rem;
 }
-
 
 /* #scroll-section-4 .description {
   position: relative;
@@ -347,7 +333,6 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   font-size: 1.2rem;
   letter-spacing: 1rem;
 }
-
 
 @media (min-width: 1024px) {
   #scroll-section-0 h1 {
