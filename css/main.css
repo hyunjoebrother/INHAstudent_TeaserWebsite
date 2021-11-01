@@ -164,7 +164,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 }
 
 #scroll-section-1 p {
-  color: #fff;
+  color: #005bac;
   text-align: center;
   justify-content: center;
   padding-top: 160px;
@@ -181,7 +181,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   width: 100%;
   height: 100%;
 }
-
+/* 
 .scroll-section-list1 p {
   background: url("../img/인하실록.jpg");
 }
@@ -192,7 +192,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 
 .scroll-section-list3 p {
   background: url("../img/NightMoment.jpg");
-}
+} */
 
 .section-description {
   position: relative;
@@ -207,11 +207,19 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 }
 
 .section-description strong {
-  margin-right: 0.2em;
-  font-size: 4.4rem;
+  margin-right: 2em;
+  font-size: 6rem;
 }
 
 /* Section2 - 공개행정 */
+
+.pin {
+  position: relative;
+  display: flex;
+  width: 480px;
+  height: 1px;
+  background-color: #fff;
+}
 
 #scroll-section-2 .main-message {
   font-size: 3.5rem;
@@ -222,29 +230,39 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   position: fixed;
 }
 
+#scroll-section-2 #content {
+  top: 120vh;
+  left: 440px;
+  text-align: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
 /* Section3 - 참여행정 */
 #scroll-section-3 {
   position: relative;
 }
 
-#scroll-section-3 .description {
-  padding: 0 1rem;
+#scroll-section-3 .main-message {
   font-size: 1.4rem;
-  margin-top: 300vh;
-  margin-left: 80px;
+  margin-top: -20px;
+  margin-left: 180px;
 }
 
-#scroll-section-3 .description strong {
+#scroll-section-3 strong {
   font-size: 4.4rem;
 }
+
 
 #video-canvas-3 {
   position: relative;
   width: 50%;
   height: 70%;
+  margin-right: 40px;
   float: right;
   top: 200px;
-  margin-right: 20px;
 }
 
 /* Section4 - 능률행정 */
@@ -254,7 +272,17 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   text-align: center;
 }
 
-#scroll-section-4 .description {
+#scroll-section-4 .main-message {
+  margin-left: 500px;
+  font-size: 1.4rem;
+}
+
+#scroll-section-4 strong {
+  font-size: 4.4rem;
+}
+
+
+/* #scroll-section-4 .description {
   position: relative;
   padding: 0 1rem;
   font-size: 1.4rem;
@@ -263,16 +291,16 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 
 #scroll-section-4 .description strong {
   font-size: 4.4rem;
-}
+} */
 
 #video-canvas-4 {
   position: fixed;
+  top: 0;
   left: 0;
-  right: 0;
   margin-top: 140px;
-  margin-left: 300px;
+  margin-left: 20px;
+  justify-content: center;
   text-align: center;
-  z-index: -1;
 }
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
@@ -319,6 +347,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   font-size: 1.2rem;
   letter-spacing: 1rem;
 }
+
 
 @media (min-width: 1024px) {
   #scroll-section-0 h1 {

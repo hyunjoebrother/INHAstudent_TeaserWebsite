@@ -14,7 +14,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/countdown.css" />
     <link rel="stylesheet" href="css/default.css" />
   </head>
   <body>
@@ -157,12 +156,15 @@
           <canvas id="video-canvas-2" width="1920" height="1080"></canvas>
         </div>
         <div class="section-description">
-          <strong>기록물 도서관</strong><br />
-          학생사회의 발전은 공개와 기록으로부터 시작됩니다.<br />
+          <strong>기록물 도서관</strong>
+          <div class="pin"></div>
+         </div>  
+         <div class="section-description" id="content">학생사회의 발전은 공개와 기록으로부터 시작됩니다.<br />
           총학생회의 기록물 도서관에 학생사회의 흩뿌려진 기록들을 하나하나 직접
           모아두었습니다.<br />총학생회의 과거를 돌아보고 현재를 살펴보아 더
-          나은 미래를 그리고자 하였습니다.
-        </div>
+          나은 미래를 그리고자 하였습니다.</div>        
+        
+        
       </section>
 
       <!-- SECTION 3 - 참여행정-->
@@ -175,8 +177,8 @@
           <!-- <img src="./img/crowd.jpg" alt=""> -->
           <canvas id="video-canvas-3" width="1080" height="1080"></canvas>
         </div>
-        <div class="description">
-          <strong>소통창구</strong><br />
+        <div class="sticky-elem main-message a">
+          <strong>소통창구</strong> <br />
           총학생회의 추진 정책과 사업을 한눈에 확인할 수 있도록 공개하며<br />
           사업 신청과 설문조사 시스템,<br />
           그리고 학생들이 직접 총학생회실에 민원을 전달할 수 있는<br />
@@ -199,7 +201,7 @@
             style="z-index: -1"
           ></canvas>
         </div>
-        <div class="description">
+        <div class="sticky-elem main-message a">
           <strong>전자결재 시스템</strong><br />
           총학생회의 업무의 전산화로 더 빠르고 더 많은 업무가 가능해집니다.
           <br />
@@ -210,43 +212,16 @@
       <!-- SECTION 5 -->
       <section class="scroll-section" id="scroll-section-5">
         <div class="sticky-elem main-message a">
-          <p>홈페이지<br />오픈 날짜</p>
-        </div>
-        <div class="sticky-elem main-message b">
-          <p>홈페이지 이후<br />이벤트 일정</p>
-        </div>
-        <div class="sticky-elem main-message c">
           <p>지금 총학생회를<br />직접 확인해보세요</p>
         </div>
-        <div class="sticky-elem main-message d">
+        <div class="sticky-elem main-message b">
           <p>학우 여러분과<br />함께 만들어가겠습니다</p>
         </div>
       </section>
-
-      <section class="countdown" id="countdown">
-        <div class="time">
-          <h2 id="days">00</h2>
-          <small>Days</small>
-        </div>
-        <div class="time">
-          <h2 id="hours">00</h2>
-          <small>Hours</small>
-        </div>
-        <div class="time">
-          <h2 id="minutes">00</h2>
-          <small>Minutes</small>
-        </div>
-        <div class="time">
-          <h2 id="seconds">00</h2>
-          <small>Seconds</small>
-        </div>
-      </section>
+    </div>
 
       <!-- FOOTER -->
       <footer class="footer">인하대학교 제41대 총학생회</footer>
-    </div>
-
     <script src="js/main.js"></script>
-    <script src="js/countdownApp.js"></script>
   </body>
 </html>

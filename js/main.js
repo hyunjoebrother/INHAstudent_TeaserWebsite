@@ -66,8 +66,8 @@
         videoImages: [],
       },
       values: {
-        videoImageCount: 8,
-        imageSequence: [0, 7],
+        videoImageCount: 21,
+        imageSequence: [0, 20],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
       },
@@ -79,7 +79,7 @@
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-3"),
-        // messageABCD
+        messageA: document.querySelector("#scroll-section-3 .main-message.a"),
         canvas: document.querySelector("#video-canvas-3"),
         context: document.querySelector("#video-canvas-3").getContext("2d"),
         videoImages: [],
@@ -89,6 +89,10 @@
         imageSequence: [0, 6],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
+        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+        messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
       },
     },
     {
@@ -98,7 +102,7 @@
       scrollHeight: 0,
       objs: {
         container: document.querySelector("#scroll-section-4"),
-        // messageABCD
+        messageA: document.querySelector("#scroll-section-4 .main-message.a"),
         canvas: document.querySelector("#video-canvas-4"),
         context: document.querySelector("#video-canvas-4").getContext("2d"),
         videoImages: [],
@@ -108,6 +112,10 @@
         imageSequence: [0, 6],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
+        messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
+        messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
+        messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
+        messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
       },
     },
     {
@@ -127,23 +135,15 @@
         // 나타나는 타이밍 조절
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
         messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
-        messageC_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
-        messageD_opacity_in: [0, 1, { start: 0.7, end: 0.8 }],
         // 위치 변화 타이밍 조절
         messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
         messageB_translateY_in: [20, 0, { start: 0.3, end: 0.4 }],
-        messageC_translateY_in: [20, 0, { start: 0.5, end: 0.6 }],
-        messageD_translateY_in: [20, 0, { start: 0.7, end: 0.8 }],
         // 시라지는 타이밍 조절
         messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
         messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
-        messageC_opacity_out: [1, 0, { start: 0.65, end: 0.7 }],
-        messageD_opacity_out: [1, 0, { start: 0.85, end: 0.9 }],
         // 위치 조절 타이밍 조절
         messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
         messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
-        messageC_translateY_out: [0, -20, { start: 0.65, end: 0.7 }],
-        messageD_translateY_out: [0, -20, { start: 0.85, end: 0.9 }],
       },
     },
   ];
@@ -369,7 +369,17 @@
           calcValues(values.imageSequence, currentYOffset)
         );
         objs.context.drawImage(objs.videoImages[sequence2], 0, 0);
-
+        if (scrollRatio <= 0.22) {
+          // in
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        }
         if (scrollRatio <= 0.4) {
           // in
           objs.canvas.style.opacity = calcValues(
@@ -391,6 +401,18 @@
           calcValues(values.imageSequence, currentYOffset)
         );
         objs.context.drawImage(objs.videoImages[sequence3], 0, 0);
+
+        if (scrollRatio <= 0.22) {
+          // in
+          objs.messageA.style.opacity = calcValues(
+            values.messageA_opacity_in,
+            currentYOffset
+          );
+          objs.messageA.style.transform = `translate3d(0, ${calcValues(
+            values.messageA_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } 
 
         if (scrollRatio <= 0.4) {
           // in
@@ -452,51 +474,6 @@
             currentYOffset
           )}%, 0)`;
         }
-
-        if (scrollRatio <= 0.62) {
-          // in
-          objs.messageC.style.opacity = calcValues(
-            values.messageC_opacity_in,
-            currentYOffset
-          );
-          objs.messageC.style.transform = `translate3d(0, ${calcValues(
-            values.messageC_translateY_in,
-            currentYOffset
-          )}%, 0)`;
-        } else {
-          // out
-          objs.messageC.style.opacity = calcValues(
-            values.messageC_opacity_out,
-            currentYOffset
-          );
-          objs.messageC.style.transform = `translate3d(0, ${calcValues(
-            values.messageC_translateY_out,
-            currentYOffset
-          )}%, 0)`;
-        }
-
-        if (scrollRatio <= 0.82) {
-          // in
-          objs.messageD.style.opacity = calcValues(
-            values.messageD_opacity_in,
-            currentYOffset
-          );
-          objs.messageD.style.transform = `translate3d(0, ${calcValues(
-            values.messageD_translateY_in,
-            currentYOffset
-          )}%, 0)`;
-        } else {
-          // out
-          objs.messageD.style.opacity = calcValues(
-            values.messageD_opacity_out,
-            currentYOffset
-          );
-          objs.messageD.style.transform = `translate3d(0, ${calcValues(
-            values.messageD_translateY_out,
-            currentYOffset
-          )}%, 0)`;
-        }
-
         break;
     }
   }
