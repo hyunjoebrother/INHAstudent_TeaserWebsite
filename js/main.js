@@ -66,8 +66,8 @@
         videoImages: [],
       },
       values: {
-        videoImageCount: 14,
-        imageSequence: [0, 13],
+        videoImageCount: 8,
+        imageSequence: [0, 7],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
       },
@@ -85,8 +85,10 @@
         videoImages: [],
       },
       values: {
-        videoImageCount: 15,
-        imageSequence: [0, 14],
+        videoImageCount: 7,
+        imageSequence: [0, 6],
+        canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
+        canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
       },
     },
     {
@@ -102,8 +104,10 @@
         videoImages: [],
       },
       values: {
-        videoImageCount: 12,
-        imageSequence: [0, 11],
+        videoImageCount: 7,
+        imageSequence: [0, 6],
+        canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
+        canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
       },
     },
     {
@@ -344,7 +348,7 @@
         );
         objs.context.drawImage(objs.videoImages[sequence1], 0, 0);
 
-        if (scrollRatio <= 0.5) {
+        if (scrollRatio <= 0.4) {
           // in
           objs.canvas.style.opacity = calcValues(
             values.canvas_opacity_in,
@@ -366,6 +370,20 @@
         );
         objs.context.drawImage(objs.videoImages[sequence2], 0, 0);
 
+        if (scrollRatio <= 0.4) {
+          // in
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_in,
+            currentYOffset
+          );
+        } else {
+          // out
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_out,
+            currentYOffset
+          );
+        }
+
         break;
 
       case 4: // 능률 행정
@@ -373,6 +391,20 @@
           calcValues(values.imageSequence, currentYOffset)
         );
         objs.context.drawImage(objs.videoImages[sequence3], 0, 0);
+
+        if (scrollRatio <= 0.4) {
+          // in
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_in,
+            currentYOffset
+          );
+        } else {
+          // out
+          objs.canvas.style.opacity = calcValues(
+            values.canvas_opacity_out,
+            currentYOffset
+          );
+        }
 
         break;
 
