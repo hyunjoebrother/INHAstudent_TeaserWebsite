@@ -394,13 +394,14 @@ opacity: .7;
   }
 
   .description strong {
-    font-size: 4rem;
+    font-size: 3.6rem;
   }
 
 
   #video-canvas-2 {
     width: 100%;
-    height: 100%;
+    height: 80%;
+    margin-top: 60px;
   }
 
   #scroll-section-2 .main-message {

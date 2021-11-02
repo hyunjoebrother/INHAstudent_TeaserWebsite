@@ -55,7 +55,7 @@
       },
       values: {
         // 스트로크
-        path_dashoffset_in: [1401, 0, { start: 0.1, end: 0.7 }],
+        path_dashoffset_in: [1401, 0, { start: 0, end: 0.3 }],
         path_dashoffset_out: [0, -1401, { start: 0.4, end: 0.8 }],
       },
     },
