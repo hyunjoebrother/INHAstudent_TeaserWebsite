@@ -352,7 +352,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 
 @media screen and (max-width: 480px) {
   header {
-    display: none;
+    visibility: hidden;
   }
 
   #scroll-section-0 h1 {
