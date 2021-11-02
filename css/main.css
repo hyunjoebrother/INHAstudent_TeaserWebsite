@@ -347,9 +347,12 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   }
 } */
 
-@media screen and (min-width: 416px) {
-  header .main-menu {
-    font-size: 1vw;
+@media screen and (max-width: 480px) {
+  header {
+    height: 24vw;
+  }
+  header .main-menu .main-menu-list .menu_name {
+    font-size: 0.6vw;
   }
   #scroll-section-0 h1 {
     font-size: 8vw;
@@ -413,6 +416,11 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   #scroll-section-5 h1 {
     font-size: 12vw;
     text-align: center;
+  }
+
+  .footer {
+    font-size: 1.6vw;
+    font-weight: 600;
   }
 
   .ribbon-path {
