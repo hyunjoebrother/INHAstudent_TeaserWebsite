@@ -362,11 +362,9 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   }
 
   #scroll-section-0 .main-message {
-    font-size: 2vw;
+    font-size: 1.6vw;
   }
-  .main-message {
-    font-size: 5vw;
-  }
+
   .description {
     padding: 0;
     font-size: 4rem;
