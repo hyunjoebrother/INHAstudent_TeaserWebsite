@@ -145,6 +145,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   font-weight: bold;
   text-align: center;
   line-height: 1.2;
+  font-size: 4rem;
 }
 .main-message small {
   font-weight: 400;
@@ -166,6 +167,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   text-align: center;
   justify-content: center;
   padding-top: 180px;
+  font-size: 5rem;
   height: 100vh;
 }
 
@@ -354,11 +356,16 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   header .main-menu .main-menu-list .menu_name {
     font-size: 0.6vw;
   }
+
   #scroll-section-0 h1 {
     font-size: 8vw;
   }
+
+  #scroll-section-0 .main-message {
+    font-size: 2vw;
+  }
   .main-message {
-    font-size: 6vw;
+    font-size: 5vw;
   }
   .description {
     padding: 0;
