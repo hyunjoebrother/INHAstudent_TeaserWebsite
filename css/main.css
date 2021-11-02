@@ -169,6 +169,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   padding-top: 180px;
   font-size: 5rem;
   height: 100vh;
+  z-index: 9s;
 }
 
 .ribbon-path {
@@ -179,6 +180,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   margin-bottom: 1200%;
   /* min-width: 850px; */
   transform: translate(-10%, -60%);
+  z-index: 7;
 }
 .ribbon-path path {
   fill: none;
@@ -315,6 +317,11 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   position: fixed;
   left: 0;
   width: 100%;
+}
+
+.sticky-elem .div {
+background-color: #000;
+opacity: .7;
 }
 
 .scroll-effect-end .sticky-elem {
