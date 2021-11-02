@@ -576,24 +576,55 @@
       prevScrollHeight += sceneInfo[i].scrollHeight;
     }
 
+    if (yOffset < prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
+      document.body.classList.remove("scroll-effect-end");
+    }
+
     if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
       enterNewScene = true;
-      currentScene++;
+      if (currentScene === sceneInfo.length - 1) {
+        document.body.classList.add("scroll-effect-end");
+      }
+      if (currentScene < sceneInfo.length - 1) {
+        currentScene++;
+      }
       document.body.setAttribute("id", `show-scene-${currentScene}`);
-      // currentScene에 맞춰서 body에 하나씩 세팅된다
     }
 
     if (yOffset < prevScrollHeight) {
       enterNewScene = true;
-      if (currentScene == 0) return; // 브라우저 바운스 효과로 음수 에러 방지
+      // 브라우저 바운스 효과로 인해 마이너스가 되는 것을 방지(모바일)
+      if (currentScene === 0) return;
       currentScene--;
       document.body.setAttribute("id", `show-scene-${currentScene}`);
-      // currentScene에 맞춰서 body에 하나씩 세팅된다
     }
 
     if (enterNewScene) return;
 
     playAnimation();
+
+    // for (let i = 0; i < currentScene; i++) {
+    //   prevScrollHeight += sceneInfo[i].scrollHeight;
+    // }
+
+    // if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
+    //   enterNewScene = true;
+    //   currentScene++;
+    //   document.body.setAttribute("id", `show-scene-${currentScene}`);
+    //   // currentScene에 맞춰서 body에 하나씩 세팅된다
+    // }
+
+    // if (yOffset < prevScrollHeight) {
+    //   enterNewScene = true;
+    //   if (currentScene == 0) return; // 브라우저 바운스 효과로 음수 에러 방지
+    //   currentScene--;
+    //   document.body.setAttribute("id", `show-scene-${currentScene}`);
+    //   // currentScene에 맞춰서 body에 하나씩 세팅된다
+    // }
+
+    // if (enterNewScene) return;
+
+    // playAnimation();
 
     //console.log(currentScene); // 몇 번째 섹션인지
   }

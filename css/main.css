@@ -314,6 +314,11 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   width: 100%;
 }
 
+.scroll-effect-end .sticky-elem {
+  /* 스크롤 효과가 모두 끝나고, 아래 일반 콘텐츠 영역에서는 sticky-elem들을 모두 안보이도록 */
+  display: none !important;
+}
+
 .sticky-elem-canvas {
   top: 0;
   height: 100%;
@@ -342,12 +347,12 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   }
 } */
 
-@media screen and (min-width: 1024px) {
-  .header .main-menu {
+@media screen and (min-width: 416px) {
+  header .main-menu {
     font-size: 1vw;
   }
   #scroll-section-0 h1 {
-    font-size: 5vw;
+    font-size: 8vw;
   }
   .main-message {
     font-size: 6vw;
@@ -357,10 +362,66 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
     font-size: 4rem;
   }
   .description strong {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 
-  .sticky-elem-canvas {
-    size: 50%;
+  #video-canvas-2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  #scroll-section-2 .main-message {
+    text-align: center;
+    margin-top: -80px;
+  }
+
+  #video-canvas-3 {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: -60px;
+  }
+
+  #scroll-section-3 .main-message {
+    text-align: center;
+    color: #000;
+    margin-left: 0;
+  }
+
+  #scroll-section-3 .main-message small {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  #video-canvas-4 {
+    width: 200%;
+    height: 200%;
+    margin: auto;
+    margin-top: -60px;
+  }
+
+  #scroll-section-4 .main-message {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  #scroll-section-4 .main-message small {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  #scroll-section-5 h1 {
+    font-size: 12vw;
+    text-align: center;
+  }
+
+  .ribbon-path {
+    width: 200%;
+    right: 0;
+    top: 20%;
+    margin-top: 200px;
+    margin-bottom: 1000%;
+    /* min-width: 850px; */
+    transform: translate(-10%, -60%);
   }
 }
