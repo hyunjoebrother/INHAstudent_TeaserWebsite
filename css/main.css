@@ -147,8 +147,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   line-height: 1.2;
 }
 .main-message small {
-  display: block;
-  margin-bottom: 0.5em;
+  font-weight: 400;
   font-size: 1.2rem;
 }
 
@@ -166,14 +165,15 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   color: #005bac;
   text-align: center;
   justify-content: center;
-  padding-top: 160px;
+  padding-top: 180px;
   height: 100vh;
 }
 
 .ribbon-path {
   width: 100%;
   right: 0;
-  top: 66%;
+  top: 20%;
+  margin-top: 440px;
   margin-bottom: 1200%;
   /* min-width: 850px; */
   transform: translate(-10%, -60%);
@@ -208,7 +208,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 }
 
 #scroll-section-2 .main-message {
-  bottom: 20px;
+  margin-top: -60px;
   text-align: center;
 }
 
@@ -223,8 +223,12 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 
 #scroll-section-3 .main-message {
   font-size: 1.4rem;
-  margin-top: -20px;
+  margin-top: -100px;
   margin-left: 60px;
+}
+
+#scroll-section-3 .main-message small {
+  margin-left: 80px;
 }
 
 #scroll-section-3 strong {
@@ -249,12 +253,16 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 #scroll-section-4 .main-message {
   font-size: 1.4rem;
   text-align: right;
-  margin-top: -20px;
+  margin-top: -60px;
   margin-left: -60px;
 }
 
 #scroll-section-4 strong {
   font-size: 4.4rem;
+}
+
+#scroll-section-4 .main-message small {
+  margin-right: 10px;
 }
 
 #video-canvas-4 {
@@ -334,7 +342,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   }
 } */
 
-@media screen and (min-width: 416px) {
+@media screen and (min-width: 1024px) {
   .header .main-menu {
     font-size: 1vw;
   }

@@ -72,8 +72,8 @@
         videoImages: [],
       },
       values: {
-        videoImageCount: 21,
-        imageSequence: [0, 20],
+        videoImageCount: 17,
+        imageSequence: [0, 16],
         canvas_opacity_in: [0, 1, { start: 0, end: 0.1 }],
         canvas_opacity_out: [1, 0, { start: 0.95, end: 1 }],
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
@@ -359,7 +359,7 @@
       case 1: // 리스트
         // 빨간 리본 패스(줄 긋기)
         // 빨간 리본 패스(줄 긋기)
-        if (scrollRatio <= 0.4) {
+        if (scrollRatio <= 0.2) {
           objs.ribbonPath.style.strokeDashoffset = calcValues(
             values.path_dashoffset_in,
             currentYOffset
