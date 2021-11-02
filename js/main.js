@@ -138,25 +138,27 @@
         messageA: document.querySelector("#scroll-section-5 .main-message.a"),
         messageB: document.querySelector("#scroll-section-5 .main-message.b"),
         messageC: document.querySelector("#scroll-section-5 .main-message.c"),
-        messageD: document.querySelector("#scroll-section-5 .main-message.d"),
-      },
       values: {
         // 타이밍 구간 지정
         // 나타나는 타이밍 조절
         messageA_opacity_in: [0, 1, { start: 0.1, end: 0.2 }],
         messageB_opacity_in: [0, 1, { start: 0.3, end: 0.4 }],
+        messageC_opacity_in: [0, 1, { start: 0.5, end: 0.6 }],
         // 위치 변화 타이밍 조절
         messageA_translateY_in: [20, 0, { start: 0.1, end: 0.2 }],
         messageB_translateY_in: [20, 0, { start: 0.3, end: 0.4 }],
+        messageC_translateY_in: [20, 0, { start: 0.5, end: 0.6 }],
         // 시라지는 타이밍 조절
         messageA_opacity_out: [1, 0, { start: 0.25, end: 0.3 }],
         messageB_opacity_out: [1, 0, { start: 0.45, end: 0.5 }],
+        messageC_opacity_out: [1, 0, { start: 0.65, end: 0.7 }],
         // 위치 조절 타이밍 조절
         messageA_translateY_out: [0, -20, { start: 0.25, end: 0.3 }],
-        messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],
+        messageB_translateY_out: [0, -20, { start: 0.45, end: 0.5 }],        
+        messageC_translateY_out: [0, -20, { start: 0.65, end: 0.7 }],
       },
     },
-  ];
+  }];
 
   function setCanvasImages() {
     let imgElem1;
@@ -509,6 +511,29 @@
             currentYOffset
           )}%, 0)`;
         }
+
+        if (scrollRatio <= 0.62) {
+          // in
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_in,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_in,
+            currentYOffset
+          )}%, 0)`;
+        } else {
+          // out
+          objs.messageC.style.opacity = calcValues(
+            values.messageC_opacity_out,
+            currentYOffset
+          );
+          objs.messageC.style.transform = `translate3d(0, ${calcValues(
+            values.messageC_translateY_out,
+            currentYOffset
+          )}%, 0)`;
+        }
+
         break;
     }
   }

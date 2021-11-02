@@ -188,9 +188,6 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   stroke-dasharray: 1401, 1401;
   stroke-dashoffset: 1401;
 }
-/* #scroll-section-1 p strong {
-    font-size: 64px;
-} */
 
 .scroll-section-list1,
 .scroll-section-list2,
@@ -198,20 +195,10 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   width: 100%;
   height: 100%;
 }
-/*
-.section-description {
-  position: relative;
-  text-align: center;
-  margin-top: 320vh;
-  /* max-width: 1000px; 
-  padding: 0 1rem;
-  font-size: 1.4rem;
-  z-index: 9;
-} */
-/* 
 .section-description strong {
   font-size: 6rem;
-} */
+}
+*/
 
 /* Section2 - 공개행정 */
 #scroll-section-2 {
@@ -221,14 +208,14 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 }
 
 #scroll-section-2 .main-message {
-  margin-top: -20px;
-  margin-left: 180px;
-  font-size: 1.4rem;
+  bottom: 20px;
+  text-align: center;
 }
 
 #scroll-section-2 strong {
   font-size: 4.4rem;
 }
+
 /* Section3 - 참여행정 */
 #scroll-section-3 {
   position: relative;
