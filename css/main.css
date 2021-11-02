@@ -139,7 +139,6 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   top: 35vh;
   margin: 5px 0;
   height: 3em;
-  font-size: 2.5rem;
   opacity: 0;
 }
 .main-message p {
@@ -209,20 +208,22 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   font-size: 1.4rem;
   z-index: 9;
 } */
-
+/* 
 .section-description strong {
   font-size: 6rem;
-}
+} */
 
 /* Section2 - 공개행정 */
 #scroll-section-2 {
   position: relative;
+  text-align: left;
+  font-size: 1.4rem;
 }
 
 #scroll-section-2 .main-message {
-  font-size: 1.4rem;
   margin-top: -20px;
   margin-left: 180px;
+  font-size: 1.4rem;
 }
 
 #scroll-section-2 strong {
