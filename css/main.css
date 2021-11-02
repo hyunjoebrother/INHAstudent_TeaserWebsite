@@ -224,7 +224,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 #scroll-section-3 .main-message {
   font-size: 1.4rem;
   margin-top: -20px;
-  margin-left: 180px;
+  margin-left: 60px;
 }
 
 #scroll-section-3 strong {
@@ -235,7 +235,7 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   position: relative;
   width: 50%;
   height: 70%;
-  margin-right: 40px;
+  margin-right: 60px;
   float: right;
   top: 200px;
 }
@@ -244,37 +244,49 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 
 #scroll-section-4 {
   position: relative;
-  text-align: center;
 }
 
 #scroll-section-4 .main-message {
-  margin-left: 500px;
   font-size: 1.4rem;
+  text-align: right;
+  margin-top: -20px;
+  margin-left: -60px;
 }
 
 #scroll-section-4 strong {
   font-size: 4.4rem;
 }
 
-/* #scroll-section-4 .description {
+#video-canvas-4 {
   position: relative;
-  padding: 0 1rem;
-  font-size: 1.4rem;
-  z-index: 9;
+  float: left;
+  margin-left: 60px;
+  top: 120px;
 }
 
-#scroll-section-4 .description strong {
-  font-size: 4.4rem;
-} */
+/* Section5 - 마무리 */
 
-#video-canvas-4 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: 140px;
-  margin-left: 20px;
-  justify-content: center;
+#scroll-section-5 {
+  position: relative;
+  background-color: #fff;
+}
+
+#scroll-section-5 h1 {
+  position: relative;
+  z-index: 5;
+  font-size: 6rem;
   text-align: center;
+  font-weight: 600;
+}
+#scroll-section-5 .main-message {
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 35vh;
+  margin: 5px 0;
+  height: 3em;
+  opacity: 0;
 }
 
 #show-scene-0 #scroll-section-0 .sticky-elem,
@@ -317,8 +329,9 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   align-items: center;
   justify-content: center;
   height: 7rem;
-  color: white;
-  font-size: 1.2rem;
+  color: #000;
+  background-color: #fff;
+  font-size: 1.4rem;
   letter-spacing: 1rem;
 }
 
@@ -356,10 +369,5 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
     width: 1000px;
     padding: 0;
     font-size: 4vw;
-  }
-  .canvas-caption {
-    margin-top: -8rem;
-    padding: 0;
-    font-size: 2rem;
   }
 }
