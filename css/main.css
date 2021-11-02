@@ -317,13 +317,6 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   height: 100%;
 }
 
-/* 
-#scroll-section-3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
 .footer {
   display: flex;
   align-items: center;
@@ -335,39 +328,31 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
   letter-spacing: 1rem;
 }
 
-@media (min-width: 1024px) {
+/* @media only screen and (max-width: 416px) {
+  .header {
+    font-size: 2vw;
+  }
+} */
+
+@media screen and (min-width: 416px) {
+  .header .main-menu {
+    font-size: 1vw;
+  }
   #scroll-section-0 h1 {
-    font-size: 9vw;
+    font-size: 5vw;
   }
   .main-message {
-    font-size: 4vw;
+    font-size: 6vw;
   }
   .description {
     padding: 0;
-    font-size: 2rem;
+    font-size: 4rem;
   }
   .description strong {
     font-size: 6rem;
   }
-  #scroll-section-2 .main-message {
-    font-size: 6vw;
-  }
-  .main-message small {
-    font-size: 1.5vw;
-  }
-  .sticky-elem.desc-message {
-    width: 20%;
-  }
-  #scroll-section-2 .b {
-    top: 20%;
-    left: 53%;
-  }
-  #scroll-section-2 .c {
-    left: 55%;
-  }
-  .mid-message {
-    width: 1000px;
-    padding: 0;
-    font-size: 4vw;
+
+  .sticky-elem-canvas {
+    size: 50%;
   }
 }
