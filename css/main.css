@@ -352,9 +352,6 @@ header .main-menu .main-menu-list .menu_contents .contents_menu > ul > li {
 
 @media screen and (max-width: 480px) {
   header {
-    height: 24vw;
-  }
-  header .main-menu {
     display: none;
   }
 
